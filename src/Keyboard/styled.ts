@@ -30,11 +30,6 @@ export const KeyboardPit = styled.div`
 	padding: 5px;
 	border-radius: 8px;
 
-	> svg {
-		width: 100%;
-		height: min-content;
-	}
-
 	> img {
 		width: 100%;
 		height: 100%;
