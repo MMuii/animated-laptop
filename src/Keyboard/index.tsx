@@ -12,9 +12,7 @@ import {
 	Speaker,
 } from "./styled";
 // @ts-ignore
-import keyboard from "../img/keyboard-minified2.png";
-// @ts-ignore
-import { ReactComponent as KeyboardSvg } from "../img/keyboard.svg";
+import keyboard from "../img/keyboard-minified.png";
 
 interface Props {
 	scrollYProgress: MotionValue<number>;
@@ -23,13 +21,11 @@ interface Props {
 export const Keyboard = ({ scrollYProgress }: Props) => {
 	const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 0]);
 
-	// TODO - replace speakers with PNG
 	return (
 		<KeyboardContainer>
 			<KeyboardWrapper>
 				<Speaker />
 				<KeyboardPit>
-					{/* <KeyboardSvg /> */}
 					<img src={keyboard} />
 				</KeyboardPit>
 				<Speaker />
@@ -40,7 +36,7 @@ export const Keyboard = ({ scrollYProgress }: Props) => {
 			<ReflectionLayer style={{ opacity }}>
 				<Reflection />
 			</ReflectionLayer>
-			<BodyIndentationFront id="indentation-front" />
+			<BodyIndentationFront />
 		</KeyboardContainer>
 	);
 };

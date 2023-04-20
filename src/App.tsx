@@ -8,14 +8,11 @@ import {
 	LaptopBottomBorder,
 	LaptopWrapper,
 	Screen,
-	Screen3D,
 	ScreenBack,
 	ScreenContainer,
-	ScreenTop,
-	ScreenTopUpper,
 } from "./styled";
 import { Keyboard } from "./Keyboard";
-import { ScreenContent } from "./ScreenContent";
+import { ScreenWrapper } from "./ScreenContent/styled";
 
 const initialWidth = window.innerWidth / 6.5;
 const initialHeight = window.innerHeight / 4;
@@ -29,7 +26,7 @@ const App = () => {
 		[0, 1],
 		[1, -6]
 	);
-	const laptopBottomBorderTransformStyle = useMotionTemplate`translate3d(0, 0, ${bottomBorderTranlateZ}px) rotateX(${bodyRotateX}deg)`;
+	const laptopBottomBorderTransformStyle = useMotionTemplate`translateZ(${bottomBorderTranlateZ}px) rotateX(${bodyRotateX}deg)`;
 
 	const width = useTransform(
 		scrollYProgress,
@@ -44,18 +41,20 @@ const App = () => {
 
 	return (
 		<Container>
-			<ContentWrapper id="content-wrapper">
-				<LaptopWrapper id="laptop-wrapper">
+			<ContentWrapper>
+				<LaptopWrapper>
 					<ScreenContainer
-						style={{ rotateX, width, height }}
-						id="screen-container"
+						style={{
+							rotateX,
+							width,
+							height,
+						}}
 					>
 						<ScreenBack>
 							<BsApple />
 						</ScreenBack>
-						{/* <ScreenTop id="screen-top" /> */}
 						<Screen>
-							<ScreenContent scrollYProgress={scrollYProgress} />
+							<ScreenWrapper />
 						</Screen>
 					</ScreenContainer>
 					<BodyContainer

@@ -5,11 +5,6 @@ interface Props {
 	scrollYProgress: MotionValue<number>;
 }
 
-// top 3% -> 0%
-// left 1% -> 0%
-// width 100% - 2% -> 100% - 0%
-// height 100% - 6% -> 100% - 0%
-
 export const ScreenContent = ({ scrollYProgress }: Props) => {
 	const contentY = useTransform(scrollYProgress, [0.99, 1], [3, 0]);
 	const contentYStyle = useMotionTemplate`${contentY}%`;
@@ -30,7 +25,6 @@ export const ScreenContent = ({ scrollYProgress }: Props) => {
 				top: contentYStyle,
 				left: contentXStyle,
 			}}
-			id="screen-content-container"
-		></ScreenWrapper>
+		/>
 	);
 };

@@ -22,12 +22,7 @@ export const KeyboardWrapper = styled.div`
 	display: grid;
 	grid-template-columns: 10% 1fr 10%;
 	gap: 1%;
-
-	> svg {
-		height: 100%;
-		width: 100%;
-		opacity: 0.3;
-	}
+	width: 100%;
 `;
 
 export const KeyboardPit = styled.div`

@@ -58,39 +58,6 @@ export const ScreenBack = styled.div`
 	background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
 `;
 
-export const ScreenTop = styled(motion.div)`
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: rotateX(90deg) translateY(-3px) translateZ(-5px);
-	background: gray;
-
-	&& {
-		height: 2px;
-	}
-`;
-
-export const ScreenTopUpper = styled.div`
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: rotateX(90deg) translateY(-3px) translateZ(2px) translateX(-50%);
-
-	&& {
-		width: calc(100% - 16px);
-		height: 3px;
-	}
-`;
-
-export const Screen3D = styled(motion.div)`
-	position: absolute;
-	border-radius: 10px;
-	border: 1px solid gray;
-	background: black;
-	width: 100%;
-	height: 100%;
-`;
-
 export const BodyContainer = styled(motion.div)`
 	position: relative;
 	transform-origin: center top;
@@ -131,10 +98,4 @@ export const Body = styled(motion.div)`
 		#bec0c3 52%,
 		#d0d0d0 100%
 	);
-`;
-
-export const Body3D = styled(motion.div)`
-	position: absolute;
-	border-radius: 10px;
-	background: gray;
 `;
