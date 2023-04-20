@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/animated-laptop/static/css/main.3ce23c5e.css",
+    "main.js": "/animated-laptop/static/js/main.f24ed02a.js",
+    "static/media/keyboard-minified.png": "/animated-laptop/static/media/keyboard-minified.f8f43442a1308b328c87.png",
+    "static/media/wallpaper.svg": "/animated-laptop/static/media/wallpaper.eb62300d87f018f22bef9ec8b9e48be1.svg",
+    "index.html": "/animated-laptop/index.html",
+    "main.3ce23c5e.css.map": "/animated-laptop/static/css/main.3ce23c5e.css.map",
+    "main.f24ed02a.js.map": "/animated-laptop/static/js/main.f24ed02a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ce23c5e.css",
+    "static/js/main.f24ed02a.js"
+  ]
+}
